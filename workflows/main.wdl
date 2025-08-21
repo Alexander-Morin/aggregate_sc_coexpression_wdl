@@ -51,8 +51,8 @@ workflow main_wf {
 call coexpression_calculator.calculate_coexpression as coexpression {
     input:
       dataset_id = dataset_id
-      cleaned_data_path = preprocessor.cleaned_mat_and_meta_file,
-      ensembl_file_path = get_ensembl_table.ensembl_file
+      cleaned_data_file = preprocessor.cleaned_mat_and_meta_file,
+      ensembl_file = get_ensembl_table.ensembl_file
   }
 
 
