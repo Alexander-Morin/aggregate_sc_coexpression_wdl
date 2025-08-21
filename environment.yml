@@ -1,0 +1,8 @@
+# environment.yml
+
+name: demo-workflow-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - miniwdl
