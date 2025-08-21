@@ -1,0 +1,7 @@
+{
+  "main_wf.dataset_id": "GSE128565",
+  "main_wf.dataset_url": "https://datasets.cellxgene.cziscience.com/79108063-0d34-4714-928c-301f510559ff.h5ad",
+  "main_wf.species": "mouse",
+  "main_wf.ensembl_version": "105",
+  "main_wf.mt_gene_file": "data/mitochondrial_genes_all.tsv"
+}
