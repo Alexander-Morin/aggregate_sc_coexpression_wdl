@@ -1,11 +1,8 @@
 # aggregate_sc_coexpression_wdl
 
-This project looks to containerize into a WDL framework parts of previous analysis that I performed here: https://github.com/PavlidisLab/TR_singlecell.
-This consisted of a series of R and bash scripts that required manual execution and environment setup, and I wanted to improve its reproducibility and portability.
+This project looks to containerize into a WDL framework parts of previous analysis that I performed here: https://github.com/PavlidisLab/TR_singlecell. This consisted of a series of R and bash scripts that required manual execution and environment setup, and I wanted to improve its reproducibility and portability.
 
-Currently the worklow accepts a Cell x Gene URL and a given dataset identifer, and produces a gene-gene matrix of the aggregate coexpression scores, saved as a .tsv.
-
-It was tested on a lightweight dataset: https://cellxgene.cziscience.com/collections/0a77d4c0-d5d0-40f0-aa1a-5e1429bcbd7e
+Currently the worklow accepts a Cell x Gene URL and a given dataset identifer, and produces a gene-gene matrix of the aggregate coexpression scores, saved as a ```.tsv```. It was tested on a lightweight [dataset](https://cellxgene.cziscience.com/collections/0a77d4c0-d5d0-40f0-aa1a-5e1429bcbd7e).
 
 ### Workflow overview
 
@@ -13,12 +10,14 @@ In brief, the pipeline aims to:
 1. Download scRNA-seq data (in ```.h5ad``` format) from the Cell x Gene resource
 2. Convert the downloaded ```.h5ad``` file into a Seurat object
 3. Preprocess this data by performing QC and filtering
-4. Generate an aggregated coexpression matrix to assist in identifiyng gene-gene correlations that are reproducible across cell types.
+4. Generate an aggregated coexpression matrix to assist in identifiyng gene-gene correlations that are reproducible across cell types
 
 ### Prereqs
 
 - [Docker engine](https://docs.docker.com/engine/install/ubuntu/)
-- Conda (I used Miniconda) ``` wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && bash miniconda.sh ```
+- Conda (I used Miniconda) 
+
+``` wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && bash miniconda.sh ```
 
 This was developed and tested within a WSL2 environment (Ubuntu 22.04)
 
