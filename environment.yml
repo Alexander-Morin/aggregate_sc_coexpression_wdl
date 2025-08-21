@@ -1,6 +1,6 @@
 # environment.yml
 
-name: demo-workflow-env
+name: wdl_env
 channels:
   - conda-forge
   - defaults
